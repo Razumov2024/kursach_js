@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Оформление заказа</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+    <div class="order-container">
+        <h1>Оформление заказа</h1>
+        
+        <div id="order-summary">
+        </div>
+        
+        <form id="order-form">
+            <div class="form-group">
+                <label for="name">Ваше имя:</label>
+                <input type="text" id="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Адрес доставки:</label>
+                <input type="text" id="address" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="date">Дата доставки:</label>
+                <input type="date" id="date" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="time">Время доставки:</label>
+                <input type="time" id="time" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="comments">Комментарии к заказу:</label>
+                <textarea id="comments"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Подтвердить заказ</button>
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const order = JSON.parse(localStorage.getItem('currentOrder'));
+    const orderSummary = document.getElementById('order-summary');
+    const orderForm = document.getElementById('order-form');
+    
+    if (order) {
+        orderSummary.innerHTML = `
+            <h3>Ваш заказ:</h3>
+            <p>${order.ingredientsText}</p>
+            <p><strong>Итого: ${order.totalPrice.toFixed(2)} BYN</strong></p>
+            <hr>
+        `;
+    } else {
+        orderSummary.innerHTML = '<p>Информация о заказе не найдена</p>';
+    }
+    
+    orderForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = {
+            name: document.getElementById('name').value,
+            address: document.getElementById('address').value,
+            phone: document.getElementById('phone').value,
+            date: document.getElementById('date').value,
+            time: document.getElementById('time').value,
+            comments: document.getElementById('comments').value,
+            order: order
+        };
+        
+        alert('Заказ успешно оформлен!');
+        window.location.href = 'index.html'; 
+    });
+});
+    </script>
+</body>
+</html>

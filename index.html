@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсовая работа Pizzaaa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Конструктор пиццы</h1>
+    </div>
+    <div class="wrapper1">
+        <div class="bloksleva">
+            <h2>Область просмотра заказа:</h2>
+            <div id="ingredients-display">Ингредиенты: ничего не выбрано</div>
+            <p id="priceDisplay">Цена: 0.00 BYN</p>
+        </div>
+<div class="bloksprava">
+    <div class="pizza-layers">
+        <img src="img/pizza1.png" class="pizza-base">
+        <img src="img/pizza2.png" class="pizza-meat" style="display: none;">
+        <img src="img/pizza3.png" class="pizza-veggies" style="display: none;">
+        <img src="img/pizza4.png" class="pizza-sauce" style="display: none;">
+        <img src="img/pizza5.png" class="pizza-full" style="display: none;">
+    </div>
+    <button id="zakaz" disabled>ЗАКАЗАТЬ</button>
+</div>
+    </div>
+    <div class="wrapper2">
+        <p>Шаг №1. Выбери основу для своей пиццы</p>
+        <div class="osnovi-container">
+            <div class="card">
+                <img src="pizza-size/2gbf4g6vtqim8dhlquy3i2abgax1n4z0.png" alt="">
+                <div class="title">Сырная</div>
+                <div class="price">13.90</div>
+                <a href="#" class="button">Выбрать</a>
+            </div>
+            <div class="card">
+                <img src="pizza-size/tomat2.png" alt="">
+                <div class="title">Томатная</div>
+                <div class="price">19.90</div>
+                <a href="#" class="button">Выбрать</a>
+            </div>
+            <div class="card">
+                <img src="pizza-size/chesnok.jpeg" alt="">
+                <div class="title">Чесночная</div>
+                <div class="price">25.90</div>
+                <a href="#" class="button">Выбрать</a>
+            </div>
+            <div class="card">
+                <img src="pizza-size/maonez3.png" alt="">
+                <div class="title">Майонезная</div>
+                <div class="price">31.90</div>
+                <a href="#" class="button">Выбрать</a>
+            </div>
+        </div>
+        </div>
+        <div class="wrapper3">
+            <p>Шаг №2. Выбери мясные ингридиенты в свою пиццу</p>
+            <div class="ingredienti-meat-container">
+                <div class="card1">
+                    <img src="img/1.jpg" alt="">
+                    <div class="title">Пепперони</div>
+                    <div class="price">5.90</div>
+                    <a href="#" class="button">Выбрать</a>
+                </div>
+                <div class="card1">
+                    <img src="img/2.jpg" alt="">
+                    <div class="title">Охот. колбаски</div>
+                    <div class="price">8.90</div>
+                    <a href="#" class="button">Выбрать</a>
+                </div>
+                <div class="card1">
+                    <img src="img/3.jpg" alt="">
+                    <div class="title">Курица</div>
+                    <div class="price">7.90</div>
+                    <a href="#" class="button">Выбрать</a>
+                </div>
+                <div class="card1">
+                    <img src="img/4.jpg" alt="">
+                    <div class="title">Ветчина</div>
+                    <div class="price">9.90</div>
+                    <a href="#" class="button">Выбрать</a>
+                </div>
+                <div class="card1">
+                    <img src="img/5.jpg" alt="">
+                    <div class="title">Солями</div>
+                    <div class="price">10.90</div>
+                    <a href="#" class="button">Выбрать</a>
+                </div>
+                <div class="card1">
+                    <img src="img/6.jpg" alt="">
+                    <div class="title">Бекон</div>
+                    <div class="price">6.90</div>
+                    <a href="#" class="button">Выбрать</a>
+                </div>
+            </div>
+            </div>
+            <div class="wrapper4">
+                <p>Шаг №3. Выбери овощные ингридиенты в свою пиццу</p>
+                <div class="ingredienti-veg-container">
+                    <div class="card2">
+                        <img src="img/11.jpg" alt="">
+                        <div class="title">Помидоры</div>
+                        <div class="price">2.90</div>
+                        <a href="#" class="button">Выбрать</a>
+                    </div>
+                    <div class="card2">
+                        <img src="img/22.jpg" alt="">
+                        <div class="title">Маслины</div>
+                        <div class="price">5.50</div>
+                        <a href="#" class="button">Выбрать</a>
+                    </div>
+                    <div class="card2">
+                        <img src="img/33.jpg" alt="">
+                        <div class="title">Перец халапеньо</div>
+                        <div class="price">3.80</div>
+                        <a href="#" class="button">Выбрать</a>
+                    </div>
+                    <div class="card2">
+                        <img src="img/44.jpg" alt="">
+                        <div class="title">Болгар. перец</div>
+                        <div class="price">3.50</div>
+                        <a href="#" class="button">Выбрать</a>
+                    </div>
+                    <div class="card2">
+                        <img src="img/55.jpg" alt="">
+                        <div class="title">Красный лук</div>
+                        <div class="price">2.50</div>
+                        <a href="#" class="button">Выбрать</a>
+                    </div>
+                    <div class="card2">
+                        <img src="img/66.jpg" alt="">
+                        <div class="title">Марино. огурцы</div>
+                        <div class="price">4.00</div>
+                        <a href="#" class="button">Выбрать</a>
+                    </div>
+                </div>
+                </div>
+                <div class="wrapper5">
+                    <p>Шаг №4. Выбери соус в свою пиццу</p>
+                    <div class="sauces-container">
+                        <div class="card3">
+                            <img src="img/111.jpg" alt="">
+                            <div class="title">Фирменный</div>
+                            <div class="price">1.90</div>
+                            <a href="#" class="button">Выбрать</a>
+                        </div>
+                        <div class="card3">
+                            <img src="img/222.jpg" alt="">
+                            <div class="title">Альфредо</div>
+                            <div class="price">2.50</div>
+                            <a href="#" class="button">Выбрать</a>
+                        </div>
+                        <div class="card3">
+                            <img src="img/333.jpg" alt="">
+                            <div class="title">Ранч</div>
+                            <div class="price">1.80</div>
+                            <a href="#" class="button">Выбрать</a>
+                        </div>
+                        <div class="card3">
+                            <img src="img/444.jpg" alt="">
+                            <div class="title">Медово горчич.</div>
+                            <div class="price">2.10</div>
+                            <a href="#" class="button">Выбрать</a>
+                        </div>
+                    </div>
+                    </div>
+<script src="script.js"></script>
+</body>
+</html>
